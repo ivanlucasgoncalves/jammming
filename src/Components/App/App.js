@@ -12,9 +12,13 @@ export default class App extends Component {
     super(props);
     
     this.state = {
-      searchResults: [{ name: 'Ivan', age: 34 }]
+      searchResults: [
+        {id: 345, name: 'U2', artist: 'U2', album: 'Elevation'},
+        {id: 346, name: 'Artic Monkeys', artist: 'Artic Monkeys', album: 'Hello!!!'}
+      ],
+      playlistName: 'New Playlist Name',
+      playlistTracks: []
     };
-    
   }
   render() {
     return (
@@ -24,7 +28,7 @@ export default class App extends Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} />
-            <PlayList />
+            <PlayList playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} />
           </div>
         </div>
       </div>
