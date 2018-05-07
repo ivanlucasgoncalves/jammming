@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-//Import CSS
 import './SearchResults.css';
 
-//Import Components
 import TrackList from '../TrackList/TrackList';
 
 export default class SearchResults extends React.Component {
@@ -16,3 +15,9 @@ export default class SearchResults extends React.Component {
     );
   }
 }
+
+SearchResults.propTypes = {
+  searchResults: PropTypes.array,
+  onAdd: PropTypes.func,
+  isRemoval: PropTypes.bool
+};

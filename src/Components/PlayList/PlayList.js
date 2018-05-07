@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-//Import CSS
 import './PlayList.css';
 
-//Import Components
 import TrackList from '../TrackList/TrackList';
 
 export default class PlayList extends React.Component {
@@ -25,3 +24,10 @@ export default class PlayList extends React.Component {
     );
   }
 }
+
+PlayList.propTypes = {
+  playlistTracks: PropTypes.array,
+  onRemove: PropTypes.func,
+  onSave: PropTypes.func,
+  isRemoval: PropTypes.bool
+};
